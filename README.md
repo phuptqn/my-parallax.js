@@ -1,3 +1,21 @@
+Edited by PhuPT
+===========
+
+Move 'return this' into couple 'if' inside, fix for Android and iOS mobile (About line 94 & 105)
+
+```javascript
+if (navigator.userAgent.match(_mobileString)) {
+	if (this.imageSrc && this.androidFix && !this.$element.is('img')) {
+		this.$element.css({
+		backgroundImage: 'url(' + this.imageSrc + ')',
+		backgroundSize: 'cover',
+		backgroundPosition: this.position
+		});
+		return this;
+	}
+}
+```
+
 Parallax.js
 ===========
 
